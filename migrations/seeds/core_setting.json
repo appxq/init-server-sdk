@@ -1,0 +1,756 @@
+[{
+  "_id": {
+    "$oid": "646cbcf13594d9fc71654c07"
+  },
+  "opts_code": "sys_roles_list",
+  "opts_label": "Roles List",
+  "opts_group": "system",
+  "opts_type": {
+    "value": "json-editor",
+    "label": "JSON Input"
+  },
+  "opts_value": [
+    "super",
+    "admin",
+    "manager",
+    "auth",
+    "user",
+    "guest"
+  ],
+  "opts_datalist": [
+    {
+      "value": "super",
+      "label": "super"
+    },
+    {
+      "value": "admin",
+      "label": "admin"
+    },
+    {
+      "value": "manager",
+      "label": "manager"
+    },
+    {
+      "value": "auth",
+      "label": "auth"
+    },
+    {
+      "value": "user",
+      "label": "user"
+    },
+    {
+      "value": "guest",
+      "label": "guest"
+    }
+  ],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": "enable role list",
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-03-14 16:09:02",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2023-05-23 20:17:37"
+},
+{
+  "_id": {
+    "$oid": "647063dd8ca31e6bb740a995"
+  },
+  "opts_code": "site_index_content",
+  "opts_label": "Index Content",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "html-editor",
+    "label": "HTML Input"
+  },
+  "opts_value": "<p style=\"text-align: center\"><span style=\"font-size: 20px\"><strong>SdForm welcome now</strong></span></p><p style=\"text-align: center\"></p><p style=\"text-align: center\"></p>",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-05-28 15:52:38",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2023-05-26 14:46:37"
+},
+{
+  "_id": {
+    "$oid": "67ab1e37d9bec31176dfc41e"
+  },
+  "opts_code": "sys_token_user",
+  "opts_label": "Token User",
+  "opts_group": "system",
+  "opts_type": {
+    "value": "text-editor",
+    "label": "Text Input"
+  },
+  "opts_value": "guest",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "no",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-02-18 16:59:35",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-11 16:53:59"
+},
+{
+  "_id": {
+    "$oid": "67b459d484e0d2a620c33cf5"
+  },
+  "opts_code": "sys_sdform_ws",
+  "opts_label": "SdForm WebSocket Enable",
+  "opts_group": "system",
+  "opts_type": {
+    "value": "boolean-editor",
+    "label": "Boolean Input"
+  },
+  "opts_value": true,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": "",
+  "opts_hint": "",
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-03-14 14:45:09",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-18 16:58:44"
+},
+{
+  "_id": {
+    "$oid": "67baba9b441e8d743d7fcb7e"
+  },
+  "opts_code": "navbar_bg_color",
+  "opts_label": "Navbar Bg Color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": null,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-14 00:10:13",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 13:05:15"
+},
+{
+  "_id": {
+    "$oid": "67babc1b441e8d743d7fcb7f"
+  },
+  "opts_code": "navbar_border_color",
+  "opts_label": "Navbar border color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": "rgb(103, 194, 58)",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-10 10:06:03",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 13:11:39"
+},
+{
+  "_id": {
+    "$oid": "67bacf17441e8d743d7fcb80"
+  },
+  "opts_code": "menu_hover_bg_color",
+  "opts_label": "Menu hover bg color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": null,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-02-23 15:40:11",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 14:32:39"
+},
+{
+  "_id": {
+    "$oid": "67bacf42441e8d743d7fcb81"
+  },
+  "opts_code": "menu_hover_text_color",
+  "opts_label": "Menu hover text color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": null,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-10-27 16:49:43",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 14:33:22"
+},
+{
+  "_id": {
+    "$oid": "67bad6a972d35a1f41247118"
+  },
+  "opts_code": "navbar_text_color",
+  "opts_label": "Navbar text color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": "rgb(103, 194, 58)",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-14 00:14:25",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:04:57"
+},
+{
+  "_id": {
+    "$oid": "67bad91e72d35a1f41247119"
+  },
+  "opts_code": "menu_bg_color",
+  "opts_label": "Menu bg color",
+  "opts_group": "Theme",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": null,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-10-27 16:48:20",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:15:26"
+},
+{
+  "_id": {
+    "$oid": "67badaa072d35a1f4124711a"
+  },
+  "opts_code": "app_slogan",
+  "opts_label": "App Slogan",
+  "opts_group": "app info",
+  "opts_type": {
+    "value": "text-editor",
+    "label": "Text Input"
+  },
+  "opts_value": "Low Code App Development ©2025",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-10 10:05:56",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:21:52"
+},
+{
+  "_id": {
+    "$oid": "67badac372d35a1f4124711b"
+  },
+  "opts_code": "app_name",
+  "opts_label": "App Name",
+  "opts_group": "app info",
+  "opts_type": {
+    "value": "text-editor",
+    "label": "Text Input"
+  },
+  "opts_value": "initCraft",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-10 10:05:46",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:22:27"
+},
+{
+  "_id": {
+    "$oid": "67badaf872d35a1f4124711c"
+  },
+  "opts_code": "app_version",
+  "opts_label": "App Version",
+  "opts_group": "app info",
+  "opts_type": {
+    "value": "text-editor",
+    "label": "Text Input"
+  },
+  "opts_value": "v1.5.0",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-11 21:21:21",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:23:20"
+},
+{
+  "_id": {
+    "$oid": "67badd1d72d35a1f4124711d"
+  },
+  "opts_code": "app_svg_logo",
+  "opts_label": "App Logo",
+  "opts_group": "app info",
+  "opts_type": {
+    "value": "text-editor",
+    "label": "Text Input"
+  },
+  "opts_value": "logo",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-10 10:05:58",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-02-23 15:32:29"
+},
+{
+  "_id": {
+    "$oid": "6915a32fcb704981f07a078c"
+  },
+  "opts_code": "site_footer_content",
+  "opts_label": "Footer Content",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "html-mini-editor",
+    "label": "HTML Mini Input"
+  },
+  "opts_value": "<p>Powered by initCraft ©2025</p>",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-14 13:57:13",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 16:21:51"
+},
+{
+  "_id": {
+    "$oid": "6915c04ecb704981f07a078d"
+  },
+  "opts_code": "site_shotcut_menu",
+  "opts_label": "Shotcut Menu",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "json-editor",
+    "label": "JSON Input"
+  },
+  "opts_value": [
+    {
+      "label": "BMI",
+      "path": "/module/app-viewer?appId=69115a099efd819d58e1cf91",
+      "icon": "addon-mongodb"
+    },
+    {
+      "label": "Test",
+      "path": "/module/app-viewer?appId=68f5ff7e2bdb232a29533e57",
+      "icon": "addon-fingerprint"
+    }
+  ],
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-13 18:38:11",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 18:26:06"
+},
+{
+  "_id": {
+    "$oid": "6915c161cb704981f07a078e"
+  },
+  "opts_code": "site_shotcut_enable",
+  "opts_label": "Shotcut Enable",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "boolean-editor",
+    "label": "Boolean Input"
+  },
+  "opts_value": true,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-15 10:18:55",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 18:30:41"
+},
+{
+  "_id": {
+    "$oid": "6915dd2fcb704981f07a078f"
+  },
+  "opts_code": "sidebar_enable",
+  "opts_label": "Sidebar Enable",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "boolean-editor",
+    "label": "Boolean Input"
+  },
+  "opts_value": true,
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-15 10:17:27",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 20:29:19"
+},
+{
+  "_id": {
+    "$oid": "6915dd6ecb704981f07a0790"
+  },
+  "opts_code": "sidebar_border_color",
+  "opts_label": "Sidebar Border Color",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": "rgba(103, 194, 58, 0.3)",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-14 00:13:42",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 20:30:22"
+},
+{
+  "_id": {
+    "$oid": "6915dd9ccb704981f07a0791"
+  },
+  "opts_code": "sidebar_text_color",
+  "opts_label": "Sidebar Text Color",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": "rgb(103, 194, 58)",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-15 10:18:38",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 20:31:08"
+},
+{
+  "_id": {
+    "$oid": "6915ddb7cb704981f07a0792"
+  },
+  "opts_code": "sidebar_bg_color",
+  "opts_label": "Sidebar BG Color",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "color-editor",
+    "label": "Color Input"
+  },
+  "opts_value": "rgba(103, 194, 58, 0.1)",
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": null,
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-14 00:10:25",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 20:31:35"
+},
+{
+  "_id": {
+    "$oid": "6915dee6cb704981f07a0793"
+  },
+  "opts_code": "sidebar_menu",
+  "opts_label": "Sidebar Menu",
+  "opts_group": "core",
+  "opts_type": {
+    "value": "json-editor",
+    "label": "JSON Input"
+  },
+  "opts_value": [
+    {
+      "label": "Dashboard",
+      "icon": "el-odometer",
+      "path": "/",
+      "role": [
+        "user"
+      ]
+    }
+  ],
+  "opts_datalist": [],
+  "opts_options": {},
+  "opts_divider": null,
+  "opts_hint": "subMenu (optional)",
+  "opts_autoload": "yes",
+  "updated_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "updated_at": "2025-11-15 18:37:20",
+  "created_by": {
+    "id": {
+      "$oid": "642a888fa09ccdfdd8291833"
+    },
+    "name": "supat maneewong (iencoded@gmail.com)"
+  },
+  "created_at": "2025-11-13 20:36:38"
+}]

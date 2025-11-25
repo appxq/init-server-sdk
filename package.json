@@ -1,0 +1,43 @@
+{
+  "name": "init-server-sdk",
+  "version": "1.5.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js --env production",
+    "start:dev": "pm2-dev start ecosystem.config.js --env production",
+    "dev": "npm run start:dev",
+    "migrate": "node migrate.js",
+    "rollback": "node rollback.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appxq/init-server-sdk.git"
+  },
+  "keywords": [
+    "api",
+    "low-code",
+    "initCraft"
+  ],
+  "author": "iencoded@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appxq/init-server-sdk/issues"
+  },
+  "homepage": "https://github.com/appxq/init-server-sdk#readme",
+  "devDependencies": {
+    "esbuild": "^0.25.8",
+    "esbuild-plugin-pino": "^2.3.3",
+    "fs-extra": "^11.3.2",
+    "pino": "^10.1.0",
+    "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dayjs": "^1.11.19",
+    "dotenv": "^17.2.3",
+    "mongodb": "^7.0.0",
+    "pino-pretty": "^13.0.0"
+  }
+}
