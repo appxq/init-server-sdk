@@ -6,6 +6,25 @@ use for initCraft only
 - MongoDB
 - NodeJS
 
+Feature
+
+- user system (login/logout)
+- RBAC
+- WebSocket
+- Notify system
+- CRUD SQL to NoSQL
+- Dynamic API (build in initCraft)
+- Dynamic Rerport (build in initCraft)
+- Dynamic SQL (build in initCraft)
+- Dynamic Apps (build in initCraft)
+- Dynamic Form (build in initCraft)
+- Migrate/Rollback update DB
+- Dynamic Setting Config
+- Files Manage
+- Dynamic import data
+- Dynamic export data
+- SDForm API
+
 ## nodejs install
 
 ```
