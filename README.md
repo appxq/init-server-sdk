@@ -2,6 +2,10 @@
 
 use for initCraft only
 
+- Fastify Framework
+- MongoDB
+- NodeJS
+
 ## nodejs install
 
 ```
