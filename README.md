@@ -89,9 +89,9 @@ authorization: enabled
 ## .env
 
 ```
-SERVICE_NAME = 'API Builder'
+SERVICE_NAME = 'InitServerSDK'
 SERVICE_VERSION = '1.5.0'
-#SERVICE_DESCRIPTION = 'Documentation the InitAPI SDK'
+#SERVICE_DESCRIPTION = 'Documentation the InitServerSDK'
 ASSETS_PATH = 'assets/'
 HOST = 'localhost'
 DOMAIN_URL = "http://localhost:3005"
