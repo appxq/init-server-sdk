@@ -201,7 +201,7 @@
     "value": "color-editor",
     "label": "Color Input"
   },
-  "opts_value": "rgb(103, 194, 58)",
+  "opts_value": "rgb(98, 106, 239)",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -209,11 +209,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-10 10:06:03",
+  "updated_at": "2025-12-02 23:12:56",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -297,7 +297,7 @@
     "value": "color-editor",
     "label": "Color Input"
   },
-  "opts_value": "rgb(103, 194, 58)",
+  "opts_value": "rgb(98, 106, 239)",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -305,11 +305,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-14 00:14:25",
+  "updated_at": "2025-12-02 23:12:59",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -361,7 +361,7 @@
     "value": "text-editor",
     "label": "Text Input"
   },
-  "opts_value": "Low Code App Development ©2025",
+  "opts_value": "Powered by initCraft ©2025",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -369,11 +369,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-10 10:05:56",
+  "updated_at": "2025-12-02 23:10:14",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -393,7 +393,7 @@
     "value": "text-editor",
     "label": "Text Input"
   },
-  "opts_value": "initCraft",
+  "opts_value": "My StarterKit",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -401,11 +401,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-10 10:05:46",
+  "updated_at": "2025-12-02 23:10:27",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -457,7 +457,7 @@
     "value": "text-editor",
     "label": "Text Input"
   },
-  "opts_value": "logo",
+  "opts_value": "logo3",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -465,11 +465,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-10 10:05:58",
+  "updated_at": "2025-12-02 23:10:50",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -628,7 +628,7 @@
     "value": "color-editor",
     "label": "Color Input"
   },
-  "opts_value": "rgba(103, 194, 58, 0.3)",
+  "opts_value": "rgba(98, 106, 239, 0.31)",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -636,11 +636,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-14 00:13:42",
+  "updated_at": "2025-12-02 23:13:24",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -660,7 +660,7 @@
     "value": "color-editor",
     "label": "Color Input"
   },
-  "opts_value": "rgb(103, 194, 58)",
+  "opts_value": "rgb(98, 106, 239)",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -668,11 +668,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-15 10:18:38",
+  "updated_at": "2025-12-02 23:13:15",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"
@@ -692,7 +692,7 @@
     "value": "color-editor",
     "label": "Color Input"
   },
-  "opts_value": "rgba(103, 194, 58, 0.1)",
+  "opts_value": "rgba(98, 106, 239, 0.1)",
   "opts_datalist": [],
   "opts_options": {},
   "opts_divider": null,
@@ -700,11 +700,11 @@
   "opts_autoload": "yes",
   "updated_by": {
     "id": {
-      "$oid": "642a888fa09ccdfdd8291833"
+      "$oid": "692ed234c87a63dde2556fcf"
     },
-    "name": "supat maneewong (iencoded@gmail.com)"
+    "name": "SuperAdmin InitAPI (admin@initSDK.com)"
   },
-  "updated_at": "2025-11-14 00:10:25",
+  "updated_at": "2025-12-02 23:13:30",
   "created_by": {
     "id": {
       "$oid": "642a888fa09ccdfdd8291833"

@@ -94,6 +94,7 @@ SERVICE_VERSION = '1.5.0'
 #SERVICE_DESCRIPTION = 'Documentation the InitServerSDK'
 ASSETS_PATH = 'assets/'
 HOST = 'localhost'
+PORT = 3005
 DOMAIN_URL = "http://localhost:3005"
 MONGODB_URL = "mongodb://localhost:27017"
 MONGODB_NAME = "dbtest"
