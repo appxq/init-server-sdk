@@ -1,6 +1,6 @@
 # InitServerSDK
 
-use for initCraft only
+๊Use with https://github.com/appxq/init-starter-kit/tree/main
 
 - Fastify Framework
 - MongoDB
