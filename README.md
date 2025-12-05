@@ -1,6 +1,6 @@
 # InitServerSDK
 
-๊Use with https://github.com/appxq/init-starter-kit
+Use with https://github.com/appxq/init-starter-kit
 
 - Fastify Framework
 - MongoDB
