@@ -84,6 +84,42 @@ exports.up = async function (db) {
 
 		await db.collection('core_user').insertOne(initUser);
 		console.log('✅ Initial user admin inserted successfully!');
+
+		let initGuest = {
+			username: 'guest',
+			email: 'guest@initSDK.com',
+			password_hash: await bcryptjs.hash('123456', 7),
+			auth_key: crypto.randomUUID(),
+			password_reset_token: null,
+			flags: 1, //-1=block 0=new user not active 1= active
+			confirmed_at: null,
+			blocked_at: null,
+			confirmed_email: false,
+			last_login_at: null,
+			profile: {
+				fname: 'guest',
+				lname: 'visit',
+				tel: null,
+				avatar: [],
+				position: {
+					code: '00',
+					name: 'none',
+				},
+				certificate_code: '00',
+				person_code: '00',
+			},
+			site: { code: '00000', name: 'Center' },
+			unit: { code: '00000', name: 'Center' },
+			notify_last_at: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+			updated_at: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+			created_at: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+			updated_by: null,
+			created_by: null,
+			roles: ['user'],
+		};
+
+		await db.collection('core_user').insertOne(initGuest);
+		console.log('✅ Initial user guest inserted successfully!');
 	} catch (err) {
 		if (err.code === 11000) {
 			console.warn('❌ User already exists, skipping insert.');
