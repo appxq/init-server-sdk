@@ -24,6 +24,8 @@ Feature
 - Dynamic import data
 - Dynamic export data
 - SDForm API
+- Google OAuth2
+- Two-Factor
 
 ## nodejs install
 
@@ -94,7 +96,7 @@ SERVICE_VERSION = '1.5.0'
 #SERVICE_DESCRIPTION = 'Documentation the InitServerSDK'
 ASSETS_PATH = 'assets/'
 HOST = 'localhost'
-PORT = 3005
+FRONTEND_URL = "http://localhost:5173"
 DOMAIN_URL = "http://localhost:3005"
 MONGODB_URL = "mongodb://localhost:27017"
 MONGODB_NAME = "dbtest"
@@ -111,6 +113,7 @@ MAILER_USER = "admin@gmail.com"
 MAILER_PASSWORD = "123456"
 MAILER_FROM = "Admin <admin@gmail.com>"
 WS_MAX = 1048576
+PRIVATE_KEY = '---Optional---'
 PUBLIC_KEY = '-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJUKaPfUKzZtBiKOsKYYGCZCFr
 EJEOZ+q/iJBak+bXAN9HVvlL/9u+rNy+HlEtWJAffA2MIXkXV8lzAqeMFmjjee/N
@@ -118,6 +121,8 @@ FDOtUsg8r6dqxCMULJpEnZ2ou370CL+XDlxn3oKorwM7LPTe2qr1DTvwVvLJx2hl
 tjverk8X5A9+IBcvMQIDAQAB
 -----END PUBLIC KEY-----'
 REGISTER_ID = '--My License ID--'
+OAUTH2_ID = '_google_id_'
+OAUTH2_SECRET = '_google_secret_'
 ```
 
 ## Run migrate

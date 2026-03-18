@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/appxq/init-server-sdk#readme",
   "devDependencies": {
+   
     "esbuild": "^0.25.8",
     "esbuild-plugin-pino": "^2.3.3",
     "fs-extra": "^11.3.2",
@@ -39,5 +40,6 @@
     "dotenv": "^17.2.3",
     "mongodb": "^7.0.0",
     "pino-pretty": "^13.0.0"
+    
   }
 }
