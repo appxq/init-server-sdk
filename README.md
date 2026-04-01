@@ -194,3 +194,14 @@ gcloud auth login
 ```
 gcloud run deploy --source .
 ```
+
+## create mongoDB atlas
+
+```
+https://cloud.mongodb.com/
+```
+
+- Create a cluster
+- Deploy your cluster => Free, Region
+- Click connect->Driver coppy SRV Connection String
+- env set MONGODB_URL
