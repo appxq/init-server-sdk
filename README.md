@@ -201,6 +201,23 @@ gcloud auth login
 gcloud run deploy --source .
 ```
 
+## google cloud config
+
+Variables Setup (env)
+Services->Edit & deploy new revision->Variables & Secrets
+Click Deploy
+
+Asset setup
+Cloud storage->Buckets (create and copy files, folder you project)
+
+Mount bucket
+Cloud run->Services->select you service->Edit & deploy new revision-> Volumes->Add Mount volume-> Cloud Storage bucket
+
+Mount path = /app/assets
+Bucket = browse [You Bucket]
+Allow permission
+Click Save
+
 ## create mongoDB atlas
 
 ```
