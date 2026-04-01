@@ -201,7 +201,22 @@ gcloud auth login
 gcloud run deploy --source .
 ```
 
-## google cloud config
+### Deploy Error(does not have permission)
+
+- IAM & Admin/IAM->Grant access
+- Principal for Error mgs
+- add roles Cloud Build Service Agent, Storage Object Viewer
+- Save and new deploy
+
+### Create service connect github (deploy by github)
+
+- Cloud run->Services->Connect to repo
+- select project and config
+- create
+- Services->Edit & deploy new revision->Variables & Secrets
+- Click Deploy
+
+## Google cloud config
 
 ### Variables Setup (env)
 
