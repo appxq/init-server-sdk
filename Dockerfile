@@ -34,5 +34,5 @@ ENV NODE_ENV=production
 EXPOSE 8080
 
 # รันไฟล์ที่ bundle แล้วโดยตรง ไม่ต้องผ่าน npm
-# CMD ["node", "dist/server.js"]
-CMD npm run migrate && node dist/server.js
+CMD ["node", "dist/server.js"]
+# CMD npm run migrate && node dist/server.js

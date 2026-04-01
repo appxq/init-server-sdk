@@ -246,3 +246,4 @@ https://cloud.mongodb.com/
 - Deploy your cluster => Free, Region
 - Click connect->Driver coppy SRV Connection String
 - env set MONGODB_URL
+- IP Access List->add 0.0.0.0/0
