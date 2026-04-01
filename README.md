@@ -203,16 +203,16 @@ gcloud run deploy --source .
 
 ## google cloud config
 
-# Variables Setup (env)
+### Variables Setup (env)
 
 - Services->Edit & deploy new revision->Variables & Secrets
 - Click Deploy
 
-# Asset setup
+### Asset setup
 
 - Cloud storage->Buckets (create and copy files, folder you project)
 
-# Mount bucket
+### Mount bucket
 
 - Cloud run->Services->select you service->Edit & deploy new revision-> Volumes->Add Mount volume-> Cloud Storage bucket
 
