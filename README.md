@@ -112,7 +112,7 @@ MONGODB_USERNAME = "admin"
 MONGODB_PASSWORD = "1234"
 JWT_SECRET = "_Your_Secret_"
 APP_NAME = "Initcraft"
-APP_URL = "https://api.initcraft.com,http://localhost:5174"
+APP_URL = "https://api.initcraft.com,https://builder.initcraft.com,http://localhost:5174"
 APP_MAXSIZE = 10
 MAILER_HOST = "smtp.gmail.com"
 MAILER_PORT = 465
@@ -138,7 +138,7 @@ OAUTH2_SECRET = '_google_secret_'
 ## CORS setup
 
 ```
-APP_URL = "https://api.initcraft.com,[You api server]"
+APP_URL = "https://api.initcraft.com,https://builder.initcraft.com,[You api server]"
 ```
 
 ## Run migrate
