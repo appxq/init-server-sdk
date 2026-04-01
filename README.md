@@ -26,6 +26,7 @@ Feature
 - SDForm API
 - Google OAuth2
 - Two-Factor
+- Support google cloud run https://console.cloud.google.com/
 
 ## nodejs install
 
@@ -35,6 +36,12 @@ npm i
 
 ```
 npm install pm2 -g
+```
+
+## update last version
+
+```
+git pull origin main
 ```
 
 ## mongoDB install
@@ -171,4 +178,18 @@ pm2 delete
 
 ```
 pm2 kill
+```
+
+## deploy to google cloud
+
+```
+brew install --cask google-cloud-sdk
+```
+
+```
+gcloud auth login
+```
+
+```
+gcloud run deploy --source .
 ```
