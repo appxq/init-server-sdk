@@ -105,7 +105,7 @@ MONGODB_PASSWORD = "1234"
 JWT_SECRET = "_Your_Secret_"
 APP_NAME = "Initcraft"
 APP_URL = "http://localhost:5173,http://localhost:5174"
-APP_MAXSIZE = 100
+APP_MAXSIZE = 10
 MAILER_HOST = "smtp.gmail.com"
 MAILER_PORT = 465
 MAILER_SECURE = "true"
@@ -113,13 +113,15 @@ MAILER_USER = "admin@gmail.com"
 MAILER_PASSWORD = "123456"
 MAILER_FROM = "Admin <admin@gmail.com>"
 WS_MAX = 1048576
-PRIVATE_KEY = '---Optional---'
-PUBLIC_KEY = '-----BEGIN PUBLIC KEY-----
+LOGIN_LIMIT = 0
+LOGIN_EXPIRES = 86400000
+PRIVATE_KEY = "---Optional---"
+PUBLIC_KEY = "-----BEGIN PUBLIC KEY-----
 MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCJUKaPfUKzZtBiKOsKYYGCZCFr
 EJEOZ+q/iJBak+bXAN9HVvlL/9u+rNy+HlEtWJAffA2MIXkXV8lzAqeMFmjjee/N
 FDOtUsg8r6dqxCMULJpEnZ2ou370CL+XDlxn3oKorwM7LPTe2qr1DTvwVvLJx2hl
 tjverk8X5A9+IBcvMQIDAQAB
------END PUBLIC KEY-----'
+-----END PUBLIC KEY-----"
 REGISTER_ID = '--My License ID--'
 OAUTH2_ID = '_google_id_'
 OAUTH2_SECRET = '_google_secret_'

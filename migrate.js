@@ -7,14 +7,18 @@ const url = process.env.MONGODB_URL || 'mongodb://localhost:27017';
 const dbName = process.env.MONGODB_NAME || 'dbtest';
 
 async function runMigrations() {
-	const client = new MongoClient(url, {
-		auth: {
-			username: process.env.MONGODB_USERNAME,
-			password: process.env.MONGODB_PASSWORD,
-		},
-		authSource: 'admin',
-	});
-	await client.connect();
+	let options = undefined;
+	if (process.env.MONGODB_USERNAME && process.env.MONGODB_PASSWORD) {
+		options = {
+			auth: {
+				username: process.env.MONGODB_USERNAME,
+				password: process.env.MONGODB_PASSWORD,
+			},
+			authSource: 'admin',
+		};
+	}
+
+	const client = new MongoClient(url, options);
 	const db = client.db(dbName);
 	const MIGRATION_COLLECTION = 'log_migrations';
 	console.log('🔌 Connected...');
