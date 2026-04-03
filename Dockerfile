@@ -1,12 +1,12 @@
 # Stage 1: Build
-FROM node:24-slim AS builder
+FROM node:25-slim AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
 
 # Stage 2: Production
-FROM node:24-slim
+FROM node:25-slim
 WORKDIR /app
 
 # ติดตั้งเครื่องมือ mongoimport/mongoexport สำหรับรันในโค้ด
