@@ -23,6 +23,7 @@ node_modules
 .env
 .env.*.local
 .env.*
+!.env.example
 package-lock.json
 
 assets/*

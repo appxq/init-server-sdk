@@ -2,5 +2,10 @@ node_modules
 npm-debug.log
 .git
 .env
-.DS_Store       
+.env.*
+.DS_Store
 *.tsbuildinfo
+logs
+handoff
+README.md
+COOLIFY.md
