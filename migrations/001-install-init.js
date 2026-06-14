@@ -19,7 +19,7 @@ exports.up = async function (db) {
 	await db.createCollection('module_packages');
 	await db.createCollection('module_report');
 	await db.createCollection('module_sql');
-	await db.createCollection('log_cache');
+	// await db.createCollection('log_cache');
 
 	await db.collection('core_user').createIndex({ username: 1 }, { unique: true, name: 'username_1' });
 	await db.collection('core_user').createIndex({ email: 1 }, { unique: true, name: 'email_1' });
@@ -39,7 +39,7 @@ exports.up = async function (db) {
 	await db.collection('module_report').createIndex({ pdf_name: 1 }, { name: 'pdf_name_1' });
 	await db.collection('module_notify').createIndex({ mode: 1 }, { name: 'mode_1' });
 	await db.collection('module_notify').createIndex({ title: 1 }, { name: 'title_1' });
-	await db.collection('log_cache').createIndex({ key: 1 }, { unique: true, name: 'key_1' });
+	// await db.collection('log_cache').createIndex({ key: 1 }, { unique: true, name: 'key_1' });
 
 	await db.collection('sdform_manage').createIndex({ form_name: 1 }, { name: 'form_name_1' });
 	await db.collection('sdform_manage').createIndex({ form_table: 1 }, { name: 'form_table_1' });
@@ -149,5 +149,5 @@ exports.down = async function (db) {
 	await db.collection('module_packages').drop();
 	await db.collection('module_report').drop();
 	await db.collection('module_sql').drop();
-	await db.collection('log_cache').drop();
+	// await db.collection('log_cache').drop();
 };

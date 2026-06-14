@@ -1,9 +1,10 @@
-# Stage 1: Build context
+# Stage 1: Build
 FROM node:25-slim AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+RUN npm run build
 
 # Stage 2: Production
 FROM node:25-slim
@@ -32,7 +33,5 @@ ENV PORT=8080
 ENV NODE_ENV=production
 EXPOSE 8080
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
-    CMD node -e "require('net').connect(Number(process.env.PORT)||8080,'127.0.0.1').on('connect',()=>process.exit(0)).on('error',()=>process.exit(1))"
 
 CMD ["sh", "-c", "node migrate.js && node dist/server.js"]
