@@ -1,12 +1,3 @@
-# Stage 1: Build
-FROM node:25-slim AS builder
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-
-# Stage 2: Production
 FROM node:25-slim
 WORKDIR /app
 
@@ -21,17 +12,21 @@ RUN apt-get update && apt-get install -y wget gnupg \
 COPY package*.json ./
 RUN npm install --omit=dev
 
-# คัดลอกไฟล์ที่จำเป็น
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/migrations ./migrations
-COPY --from=builder /app/assets ./assets
-COPY --from=builder /app/mongo-func.js ./mongo-func.js
-COPY --from=builder /app/migrate.js ./migrate.js
-COPY --from=builder /app/rollback.js ./rollback.js
+# คัดลอกไฟล์ที่จำเป็น (dist build มาแล้ว commit ไว้ใน repo)
+COPY dist ./dist
+COPY migrations ./migrations
+COPY assets ./assets
+COPY mongo-func.js ./mongo-func.js
+COPY migrate.js ./migrate.js
+COPY rollback.js ./rollback.js
 
 ENV PORT=8080
 ENV NODE_ENV=production
 EXPOSE 8080
 
+# TCP health check — เช็คแค่ว่า port เปิด (ไม่พึ่ง curl/nc ที่ slim image ไม่มี)
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s --retries=3 \
+    CMD node -e "require('net').connect(Number(process.env.PORT)||8080,'127.0.0.1').on('connect',()=>process.exit(0)).on('error',()=>process.exit(1))"
 
+# รัน migration ก่อน แล้วค่อย start server (bundle ตรง ไม่ผ่าน npm)
 CMD ["sh", "-c", "node migrate.js && node dist/server.js"]
