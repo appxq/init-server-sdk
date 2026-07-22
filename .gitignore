@@ -28,6 +28,8 @@ package-lock.json
 
 assets/*
 !assets/image
+!assets/fonts
+!assets/latex
 assets/export/*
 !assets/export
 db/auth/*

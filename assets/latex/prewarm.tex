@@ -1,0 +1,21 @@
+% pre-warm dummy — compile ตอน Docker build เพื่อฝัง TeX package cache ใน image
+% ครอบคลุม package ที่ report ใช้บ่อย (compile prod แรกจะไม่ต้องดึงเน็ต)
+\documentclass[a4paper,12pt]{article}
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\geometry{margin=2cm}
+\setmainfont{Sarabun}
+\begin{document}
+\section*{pre-warm}
+ทดสอบภาษาไทย\hskip0pt plus0.5pt minus0.3pt\relax และ glue break — English 123 ๑๒๓
+\begin{longtable}{|l|r|}
+\hline รายการ & จำนวน \\ \hline
+A & 1 \\ \hline
+\end{longtable}
+\textcolor{red}{color test}
+\end{document}

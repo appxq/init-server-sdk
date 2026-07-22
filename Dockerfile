@@ -8,6 +8,30 @@ RUN apt-get update && apt-get install -y wget gnupg \
     && apt-get update && apt-get install -y mongodb-database-tools \
     && rm -rf /var/lib/apt/lists/*
 
+# --- LaTeX engine (Tectonic) สำหรับ Dynamic Report แบบ LaTeX ---
+# arch-aware musl static → รันได้ทั้ง amd64 (prod/coolify) และ arm64; ปิด shell-escape (\write18) โดย default
+# NB: gnu(glibc) build ต้อง glibc>=2.38 แต่ base bookworm=2.36 → ใช้ musl static portable กว่า
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates wget fontconfig \
+    && ARCH="$(dpkg --print-architecture)" \
+    && case "$ARCH" in \
+         amd64) T="x86_64-unknown-linux-musl" ;; \
+         arm64) T="aarch64-unknown-linux-musl" ;; \
+         *) echo "unsupported arch: $ARCH" >&2; exit 1 ;; \
+       esac \
+    && wget -qO /tmp/tectonic.tar.gz "https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.16.9/tectonic-0.16.9-${T}.tar.gz" \
+    && tar xzf /tmp/tectonic.tar.gz -C /usr/local/bin \
+    && rm /tmp/tectonic.tar.gz \
+    && rm -rf /var/lib/apt/lists/*
+
+# font Sarabun (OFL) — Debian ไม่มี ต้อง COPY เข้า image + fc-cache (fontspec \setmainfont{Sarabun} ชี้ผ่าน fontconfig by-name)
+COPY assets/fonts/Sarabun.ttc /usr/share/fonts/truetype/sarabun/Sarabun.ttc
+RUN fc-cache -f
+
+# pre-warm: compile dummy ตอน build → ฝัง TeX package cache ใน image (compile prod แรกเร็ว ไม่ต้องพึ่งเน็ต)
+ENV TECTONIC_CACHE_DIR=/opt/tectonic-cache
+COPY assets/latex/prewarm.tex /tmp/prewarm.tex
+RUN cd /tmp && tectonic prewarm.tex && rm -f prewarm.*
+
 # ติดตั้ง production dependencies
 COPY package*.json ./
 RUN npm install --omit=dev
