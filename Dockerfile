@@ -40,6 +40,9 @@ RUN npm install --omit=dev
 COPY dist ./dist
 COPY migrations ./migrations
 COPY assets ./assets
+# ไฟล์ LaTeX ที่มากับโค้ด วางนอก /app/assets — Coolify mount volume ทับ /app/assets ทำให้ไฟล์จาก image ถูกบัง
+COPY assets/latex /opt/sdlatex/latex
+COPY assets/fonts /opt/sdlatex/fonts
 COPY mongo-func.js ./mongo-func.js
 COPY migrate.js ./migrate.js
 COPY rollback.js ./rollback.js
