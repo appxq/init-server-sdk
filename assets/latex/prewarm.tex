@@ -1,6 +1,12 @@
 % pre-warm dummy — compile ตอน Docker build เพื่อฝัง TeX package cache ใน image
 % ครอบคลุม package ที่ report ใช้บ่อย (compile prod แรกจะไม่ต้องดึงเน็ต)
 \documentclass[a4paper,12pt]{article}
+% class ตัวนี้ 12pt → ไม่เคยดึง size10.clo มาเก็บ แต่ report ส่วนใหญ่ใช้ \documentclass{article} (10pt default)
+% ⇒ บน his cache-miss ทุกใบหลัง deploy แล้ว online fallback timeout 10s (เจอ 2026-09-22) — แตะไฟล์ให้ tectonic ดึงเข้า cache
+\IfFileExists{size10.clo}{}{}\IfFileExists{size11.clo}{}{}
+\IfFileExists{tex-text.tec}{}{}% mapping=tex-text ของ sdthai.sty (ขาด = แค่ warning แต่ -- ไม่กลายเป็น –)
+% size10.clo โหลด Latin Modern 10pt ทันทีตอน \documentclass (ก่อน sdthai สลับฟอนต์) → ต้องมี otf ขนาดนี้ใน cache ด้วย
+\font\sdprewarmlm="[lmroman10-regular]:mapping=tex-text" at 10pt
 \usepackage{fontspec}
 \usepackage{geometry}
 \usepackage{longtable}
@@ -30,6 +36,8 @@ A & 1 \\ \hline
 \begin{textblock*}{3cm}(2cm,2cm)textpos\end{textblock*}
 \begin{tabularx}{\linewidth}{|X|r|}\hline \multirow{1}{*}{x} & \uline{1} \\ \hline\end{tabularx}
 % ขนาดตัวอักษรเอกสารราชการ (16pt/29pt) — ให้ฟอนต์ math ขนาดนั้นอยู่ใน cache ด้วย
+% 10pt/11pt = ขนาดตั้งต้นของ report ที่ไม่ระบุ option class → math font ชุด 7/5pt (cmr7 cmmi5 cmsy7 ...)
+{\fontsize{10pt}{12pt}\selectfont ขนาด 10 $x^2$\\}{\fontsize{11pt}{13pt}\selectfont ขนาด 11 $x^2$\\}
 {\fontsize{16pt}{18pt}\selectfont ขนาด 16 $x^2$\\}{\fontsize{29pt}{32pt}\selectfont ขนาด 29 $x$\\}
 $\left\{\rule{0pt}{1cm}\right.\sum$ % วงเล็บใหญ่/สัญลักษณ์ math (cmex10)
 \end{document}
