@@ -23,6 +23,21 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && rm /tmp/tectonic.tar.gz \
     && rm -rf /var/lib/apt/lists/*
 
+# --- Typst engine สำหรับ Typst report type (pdf_type = typst) ---
+# musl static เหตุผลเดียวกับ tectonic (glibc ของ bookworm เก่าเกิน) · release เป็น tar.xz → ต้องมี xz-utils
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates wget xz-utils \
+    && ARCH="$(dpkg --print-architecture)" \
+    && case "$ARCH" in \
+         amd64) T="x86_64-unknown-linux-musl" ;; \
+         arm64) T="aarch64-unknown-linux-musl" ;; \
+         *) echo "unsupported arch: $ARCH" >&2; exit 1 ;; \
+       esac \
+    && wget -qO /tmp/typst.tar.xz "https://github.com/typst/typst/releases/download/v0.15.1/typst-${T}.tar.xz" \
+    && tar xJf /tmp/typst.tar.xz -C /tmp \
+    && mv "/tmp/typst-${T}/typst" /usr/local/bin/typst \
+    && rm -rf /tmp/typst.tar.xz "/tmp/typst-${T}" /var/lib/apt/lists/* \
+    && typst --version
+
 # font Sarabun (OFL) — Debian ไม่มี ต้อง COPY เข้า image + fc-cache (fontspec \setmainfont{Sarabun} ชี้ผ่าน fontconfig by-name)
 COPY assets/fonts/Sarabun.ttc /usr/share/fonts/truetype/sarabun/Sarabun.ttc
 RUN fc-cache -f
@@ -43,6 +58,8 @@ COPY assets ./assets
 # ไฟล์ LaTeX ที่มากับโค้ด วางนอก /app/assets — Coolify mount volume ทับ /app/assets ทำให้ไฟล์จาก image ถูกบัง
 COPY assets/latex /opt/sdlatex/latex
 COPY assets/fonts /opt/sdlatex/fonts
+# sdthai.typ + package ที่มากับโค้ด (tiaoma สำหรับ qr/barcode) — Typst report
+COPY assets/typst /opt/sdlatex/typst
 COPY mongo-func.js ./mongo-func.js
 COPY migrate.js ./migrate.js
 COPY rollback.js ./rollback.js

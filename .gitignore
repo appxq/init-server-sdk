@@ -30,6 +30,7 @@ assets/*
 !assets/image
 !assets/fonts
 !assets/latex
+!assets/typst
 assets/export/*
 !assets/export
 db/auth/*
