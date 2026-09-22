@@ -8,6 +8,14 @@
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{graphicx}
+% เอกสารราชการ/แบบฟอร์ม (2026-09-22): จัดตำแหน่งแน่นอน · พื้นหลังแบบฟอร์ม · ตาราง · ขีดเส้นใต้
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tikz}
 \geometry{margin=2cm}
 \setmainfont{Sarabun}
 \begin{document}
@@ -18,4 +26,10 @@
 A & 1 \\ \hline
 \end{longtable}
 \textcolor{red}{color test}
+\begin{tikzpicture}[remember picture,overlay]\node at (current page.center) {tikz};\end{tikzpicture}
+\begin{textblock*}{3cm}(2cm,2cm)textpos\end{textblock*}
+\begin{tabularx}{\linewidth}{|X|r|}\hline \multirow{1}{*}{x} & \uline{1} \\ \hline\end{tabularx}
+% ขนาดตัวอักษรเอกสารราชการ (16pt/29pt) — ให้ฟอนต์ math ขนาดนั้นอยู่ใน cache ด้วย
+{\fontsize{16pt}{18pt}\selectfont ขนาด 16 $x^2$\\}{\fontsize{29pt}{32pt}\selectfont ขนาด 29 $x$\\}
+$\left\{\rule{0pt}{1cm}\right.\sum$ % วงเล็บใหญ่/สัญลักษณ์ math (cmex10)
 \end{document}

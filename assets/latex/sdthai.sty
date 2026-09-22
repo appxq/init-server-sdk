@@ -1,0 +1,54 @@
+% sdthai.sty — ฟอนต์ไทย + ตัวช่วยเอกสารราชการ สำหรับ LaTeX report (server คัดลอกไฟล์นี้เข้าโฟลเดอร์ compile ให้ทุกครั้ง)
+%
+%   \usepackage{sdthai}          % TH Sarabun New (ค่าเริ่มต้น)
+%   \usepackage[gov]{sdthai}     % + ขนาด 16pt ระยะขอบตามระเบียบงานสารบรรณ (บน 2.5 ซม. ซ้าย 3 ซม. ขวา 2 ซม.)
+%   \usepackage[sarabun]{sdthai} % Google Sarabun แทน TH Sarabun New
+%
+% ทำไมไม่ใช้ fontspec: โหลด fontspec + ค้นฟอนต์ผ่าน fontconfig กินเวลาราว ~40% ของ compile ทั้งใบ
+% ที่นี่ประกาศฟอนต์ด้วย path ตรงผ่าน NFSS (XeTeX) → เร็วกว่า ผลพิมพ์เหมือนกัน
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sdthai}[2026/09/22 initCraft Thai report helpers]
+
+\newif\ifsdthai@gov
+\newif\ifsdthai@sarabun
+\DeclareOption{gov}{\sdthai@govtrue}
+\DeclareOption{sarabun}{\sdthai@sarabuntrue}
+\ProcessOptions\relax
+
+% @@FONTDIR@@ ถูกแทนด้วย path จริงของ assets/fonts ตอน compile
+\ifsdthai@sarabun
+  \DeclareFontFamily{TU}{sdthai}{}
+  \DeclareFontShape{TU}{sdthai}{m}{n}{<-> "[@@FONTDIR@@/Sarabun.ttc:0]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{m}{it}{<-> "[@@FONTDIR@@/Sarabun.ttc:1]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{b}{n}{<-> "[@@FONTDIR@@/Sarabun.ttc:6]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{b}{it}{<-> "[@@FONTDIR@@/Sarabun.ttc:7]:mapping=tex-text"}{}
+\else
+  \DeclareFontFamily{TU}{sdthai}{}
+  \DeclareFontShape{TU}{sdthai}{m}{n}{<-> "[@@FONTDIR@@/THSarabunNew.ttf]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{m}{it}{<-> "[@@FONTDIR@@/THSarabunNew-Italic.ttf]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{b}{n}{<-> "[@@FONTDIR@@/THSarabunNew-Bold.ttf]:mapping=tex-text"}{}
+  \DeclareFontShape{TU}{sdthai}{b}{it}{<-> "[@@FONTDIR@@/THSarabunNew-BoldItalic.ttf]:mapping=tex-text"}{}
+\fi
+% \textbf ใช้ bx (bold extended) → ชี้กลับไป b
+\DeclareFontShape{TU}{sdthai}{bx}{n}{<->ssub * sdthai/b/n}{}
+\DeclareFontShape{TU}{sdthai}{bx}{it}{<->ssub * sdthai/b/it}{}
+\renewcommand{\rmdefault}{sdthai}
+\renewcommand{\sfdefault}{sdthai}
+\renewcommand{\familydefault}{\rmdefault}
+
+% ตัวช่วยที่ใช้บ่อยในเอกสารราชการ
+\newcommand{\dotline}[1][3cm]{\makebox[#1]{\dotfill}}         % ช่องจุดไข่ปลาความยาวคงที่: \dotline[5cm]
+% ค่าวางบนเส้นจุดไข่ปลา (แบบฟอร์มกรอก): \fillin[5cm]{\VAR{name}} — จุดอยู่ใต้ตัวอักษรเล็กน้อย ข้อความกึ่งกลาง
+\newcommand{\fillin}[2][3cm]{\makebox[0pt][l]{\raisebox{-3pt}{\dotline[#1]}}\makebox[#1][c]{#2}}
+\newcommand{\sdindent}{\hspace*{2.5cm}}                       % ย่อหน้าราชการ 2.5 ซม.
+
+\ifsdthai@gov
+  \RequirePackage[a4paper,top=2.5cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+  % TH Sarabun New ตัวเล็กกว่าฟอนต์ทั่วไป — เอกสารราชการใช้ 16pt บรรทัดละ ~1.1 เท่าของขนาด
+  \AtBeginDocument{\fontsize{16pt}{18pt}\selectfont}
+  \setlength{\parindent}{0pt}
+  \pagestyle{empty}
+\fi
+
+\normalfont
+\endinput
